@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Design Responsivo com Media Queries</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            width: 80%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+            background-color: lightgray;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 2rem;
+        }
+
+        p {
+            font-size: 1.25rem;
+        }
+        
+        /*Desktop*/
+        @media(min-width: 1024px){
+            .container{
+               background-color: blueviolet;
+               padding: 4rem; 
+            }
+        }
+
+
+        /*Tablete*/
+        @media (max-width: 1024px) and (min-width: 768px){
+            .container{
+               background-color: rgb(60, 255, 0);
+               padding: 3rem; 
+            }
+        }
+
+
+        /*Mobail*/
+        @media (max-width: 768px){
+            .container{
+               background-color: rgb(0, 225, 255);
+               padding: 1rem;
+                
+            }
+            h1{
+                font-size: 1.5rem;
+                
+            }
+            p{
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Layout Responsivo com Media Queries</h1>
+        <p>Este exemplo ajusta o layout conforme o tamanho da tela. O design se adapta para desktops, tablets e smartphones usando media queries.</p>
+    </div>
+
+</body>
+</html>
